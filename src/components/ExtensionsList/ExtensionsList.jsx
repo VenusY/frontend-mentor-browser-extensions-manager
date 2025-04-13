@@ -28,7 +28,7 @@ export default function ExtensionsList() {
 
       {data.map((extension, index) => {
         return (
-          <div className='extension'>
+          <div key={extension.name} className='extension'>
             <div className='extension__container'>
               <img
                 src={require(`../../assets/images/logo-${logoArray[index]}.svg`)}

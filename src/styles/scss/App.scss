@@ -11,6 +11,10 @@
   font-style: italic;
 }
 
+:root {
+  --ff-noto-sans: 'Noto Sans', sans-serif;
+}
+
 #dark {
   --bg-gradient: linear-gradient(180deg, #040918 0%, #091540 100%);
   --bg-main: hsl(224, 26%, 16%);
@@ -37,4 +41,13 @@
   --clr-extension-desc: hsl(226, 25%, 17%);
   --clr-header-border: hsl(224, 29%, 90%);
   --clr-accent: hsl(3, 77%, 44%);
+}
+
+.app {
+  padding-block: 24px 64px;
+  padding-inline: 16px;
+  background: var(--bg-gradient);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-family: var(--ff-noto-sans);
 }

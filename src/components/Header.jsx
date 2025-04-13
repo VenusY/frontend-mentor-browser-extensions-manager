@@ -1,4 +1,4 @@
-export default function Header() {
+export default function Header({ toggleTheme }) {
   return (
     <header className='header'>
       <img
@@ -7,7 +7,7 @@ export default function Header() {
         className='header__logo'
       />
 
-      <button className='theme-button'>
+      <button className='theme-button' onClick={toggleTheme}>
         <img
           src={require('../assets/images/icon-sun.svg')}
           alt='Sun'

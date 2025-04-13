@@ -17,8 +17,8 @@ export default function App() {
   }
 
   return (
-    <div id={theme}>
-      <Header toggleTheme={toggleTheme} />
+    <div id={theme} className='app'>
+      <Header theme={theme} toggleTheme={toggleTheme} />
       <ExtensionsList />
     </div>
   );

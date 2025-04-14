@@ -37,6 +37,7 @@ export default function ExtensionsList() {
         >
           All
         </button>
+
         <button
           className={`filters-container__button ${
             filter === 'active' ? 'filters-container__button--active' : ''
@@ -45,6 +46,7 @@ export default function ExtensionsList() {
         >
           Active
         </button>
+
         <button
           className={`filters-container__button ${
             filter === 'inactive' ? 'filters-container__button--active' : ''
@@ -55,34 +57,34 @@ export default function ExtensionsList() {
         </button>
       </div>
 
-      {data.map((extension, index) => {
-        return (
-          <div key={extension.name} className='extension'>
-            <div className='extension__container'>
-              <img
-                src={require(`../../assets/images/logo-${logoArray[index]}.svg`)}
-                alt={`${extension.name} logo`}
-                className='extension__logo'
-              />
+      <div className='extensions-list__container'>
+        {data.map((extension, index) => {
+          return (
+            <div key={extension.name} className='extension'>
+              <div className='extension__container'>
+                <img
+                  src={require(`../../assets/images/logo-${logoArray[index]}.svg`)}
+                  alt={`${extension.name} logo`}
+                  className='extension__logo'
+                />
+                <section className='extension__text-section'>
+                  <h2 className='extension__name'>{extension.name}</h2>
+                  <p className='extension__description'>
+                    {extension.description}
+                  </p>
+                </section>
+              </div>
 
-              <section className='extension__text-section'>
-                <h2 className='extension__name'>{extension.name}</h2>
-                <p className='extension__description'>
-                  {extension.description}
-                </p>
-              </section>
+              <div className='extension__buttons-container'>
+                <button className='extension__remove-button'>Remove</button>
+                <button className='extension__toggle-button'>
+                  <div className='extension__toggle-indicator'></div>
+                </button>
+              </div>
             </div>
-
-            <div className='extension__buttons-container'>
-              <button className='extension__remove-button'>Remove</button>
-
-              <button className='extension__toggle-button'>
-                <div className='extension__toggle-indicator'></div>
-              </button>
-            </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </main>
   );
 }

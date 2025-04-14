@@ -56,9 +56,18 @@
   --clr-header-border: hsl(224, 29%, 90%);
   --clr-filter-button-border: hsl(224, 27%, 89%);
   --clr-filter-button-border-hover: hsl(212, 32%, 91%);
-  --clr-filter-button-hover: hsl(219, 14%, 36%);
+  --clr-filter-button-hover: hsl(228, 13%, 45%);
   --clr-extension-border: hsl(215, 31%, 89%);
   --clr-remove-button-border: hsl(220, 3%, 78%);
+}
+
+button {
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid var(--clr-accent);
+    outline-offset: 2px;
+  }
 }
 
 .app {

@@ -71,6 +71,7 @@ button {
 }
 
 .app {
+  min-height: 100vh;
   padding-block: 24px 64px;
   padding-inline: 16px;
   background: var(--bg-gradient);

@@ -63,6 +63,7 @@ export default function ExtensionsList() {
           return (
             <Extension
               key={extension.name}
+              filter={filter}
               extensionName={extension.name}
               extensionDescription={extension.description}
               extensionIsActive={extension.isActive}

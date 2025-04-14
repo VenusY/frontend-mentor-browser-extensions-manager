@@ -1,6 +1,7 @@
 import '../../styles/scss/ExtensionsList.scss';
 import { useState } from 'react';
 import data from './data.json';
+import Extension from '../Extension';
 
 export default function ExtensionsList() {
   const [filter, setFilter] = useState('all');
@@ -60,28 +61,13 @@ export default function ExtensionsList() {
       <div className='extensions-list__container'>
         {data.map((extension, index) => {
           return (
-            <div key={extension.name} className='extension'>
-              <div className='extension__container'>
-                <img
-                  src={require(`../../assets/images/logo-${logoArray[index]}.svg`)}
-                  alt={`${extension.name} logo`}
-                  className='extension__logo'
-                />
-                <section className='extension__text-section'>
-                  <h2 className='extension__name'>{extension.name}</h2>
-                  <p className='extension__description'>
-                    {extension.description}
-                  </p>
-                </section>
-              </div>
-
-              <div className='extension__buttons-container'>
-                <button className='extension__remove-button'>Remove</button>
-                <button className='extension__toggle-button'>
-                  <div className='extension__toggle-indicator'></div>
-                </button>
-              </div>
-            </div>
+            <Extension
+              key={extension.name}
+              extensionName={extension.name}
+              extensionDescription={extension.description}
+              extensionIsActive={extension.isActive}
+              extensionLogo={require(`../../assets/images/logo-${logoArray[index]}.svg`)}
+            />
           );
         })}
       </div>

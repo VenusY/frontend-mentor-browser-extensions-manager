@@ -1,6 +1,14 @@
+import '../../styles/scss/ExtensionsList.scss';
+import { useState } from 'react';
 import data from './data.json';
 
 export default function ExtensionsList() {
+  const [filter, setFilter] = useState('all');
+
+  function applyFilter(e) {
+    setFilter(e.currentTarget.textContent.toLowerCase());
+  }
+
   const logoArray = [
     'devlens',
     'style-spy',
@@ -21,9 +29,30 @@ export default function ExtensionsList() {
       <h1 className='extensions-list__heading'>Extensions List</h1>
 
       <div className='filters-container'>
-        <button className='filters-container__button'>All</button>
-        <button className='filters-container__button'>Active</button>
-        <button className='filters-container__button'>Inactive</button>
+        <button
+          className={`filters-container__button ${
+            filter === 'all' ? 'filters-container__button--active' : ''
+          }`}
+          onClick={applyFilter}
+        >
+          All
+        </button>
+        <button
+          className={`filters-container__button ${
+            filter === 'active' ? 'filters-container__button--active' : ''
+          }`}
+          onClick={applyFilter}
+        >
+          Active
+        </button>
+        <button
+          className={`filters-container__button ${
+            filter === 'inactive' ? 'filters-container__button--active' : ''
+          }`}
+          onClick={applyFilter}
+        >
+          Inactive
+        </button>
       </div>
 
       {data.map((extension, index) => {

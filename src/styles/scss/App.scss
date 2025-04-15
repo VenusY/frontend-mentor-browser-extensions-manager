@@ -76,4 +76,10 @@ button {
   padding-inline: 16px;
   background: var(--bg-gradient);
   font-family: var(--ff-noto-sans);
+
+  & > * {
+    width: 100%;
+    max-width: 1170px;
+    margin-inline: auto;
+  }
 }

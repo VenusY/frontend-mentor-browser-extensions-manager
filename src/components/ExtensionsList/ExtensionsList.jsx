@@ -27,36 +27,38 @@ export default function ExtensionsList() {
 
   return (
     <main className='extensions-list'>
-      <h1 className='extensions-list__heading'>Extensions List</h1>
+      <header className='extensions-list__header'>
+        <h1 className='extensions-list__heading'>Extensions List</h1>
 
-      <div className='filters-container'>
-        <button
-          className={`filters-container__button ${
-            filter === 'all' ? 'filters-container__button--active' : ''
-          }`}
-          onClick={applyFilter}
-        >
-          All
-        </button>
+        <div className='filters-container'>
+          <button
+            className={`filters-container__button ${
+              filter === 'all' ? 'filters-container__button--active' : ''
+            }`}
+            onClick={applyFilter}
+          >
+            All
+          </button>
 
-        <button
-          className={`filters-container__button ${
-            filter === 'active' ? 'filters-container__button--active' : ''
-          }`}
-          onClick={applyFilter}
-        >
-          Active
-        </button>
+          <button
+            className={`filters-container__button ${
+              filter === 'active' ? 'filters-container__button--active' : ''
+            }`}
+            onClick={applyFilter}
+          >
+            Active
+          </button>
 
-        <button
-          className={`filters-container__button ${
-            filter === 'inactive' ? 'filters-container__button--active' : ''
-          }`}
-          onClick={applyFilter}
-        >
-          Inactive
-        </button>
-      </div>
+          <button
+            className={`filters-container__button ${
+              filter === 'inactive' ? 'filters-container__button--active' : ''
+            }`}
+            onClick={applyFilter}
+          >
+            Inactive
+          </button>
+        </div>
+      </header>
 
       <div className='extensions-list__container'>
         {data.map((extension, index) => {

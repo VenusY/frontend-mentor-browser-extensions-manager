@@ -60,3 +60,22 @@
     }
   }
 }
+
+@media screen and (min-width: 1202px) {
+  .extensions-list {
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: u.rem(32);
+    }
+
+    &__heading {
+      margin-bottom: 0;
+    }
+  }
+
+  .filters-container {
+    margin-bottom: 0;
+  }
+}

@@ -83,3 +83,9 @@ button {
     margin-inline: auto;
   }
 }
+
+@media screen and (min-width: 1202px) {
+  .app {
+    padding-block: 40px 74px;
+  }
+}

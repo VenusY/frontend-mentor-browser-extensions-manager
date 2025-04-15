@@ -9,9 +9,19 @@ export default function Extension({
   extensionLogo,
 }) {
   const [isActive, setIsActive] = useState(extensionIsActive);
+  const [isRemoved, setIsRemoved] = useState(false);
 
   function toggleActiveState() {
     setIsActive(!isActive);
+  }
+
+  function removeExtension() {
+    console.log('The remove button has been clicked.');
+    setIsRemoved(true);
+  }
+
+  if (isRemoved) {
+    return null;
   }
 
   if (filter === 'active' && isActive) {
@@ -30,7 +40,12 @@ export default function Extension({
         </div>
 
         <div className='extension__buttons-container'>
-          <button className='extension__remove-button'>Remove</button>
+          <button
+            className='extension__remove-button'
+            onClick={removeExtension}
+          >
+            Remove
+          </button>
           <button
             className={`extension__toggle-button ${
               isActive ? '' : 'extension__toggle-button--inactive'
@@ -62,7 +77,12 @@ export default function Extension({
         </div>
 
         <div className='extension__buttons-container'>
-          <button className='extension__remove-button'>Remove</button>
+          <button
+            className='extension__remove-button'
+            onClick={removeExtension}
+          >
+            Remove
+          </button>
           <button
             className={`extension__toggle-button ${
               isActive ? '' : 'extension__toggle-button--inactive'
@@ -94,7 +114,12 @@ export default function Extension({
         </div>
 
         <div className='extension__buttons-container'>
-          <button className='extension__remove-button'>Remove</button>
+          <button
+            className='extension__remove-button'
+            onClick={removeExtension}
+          >
+            Remove
+          </button>
           <button
             className={`extension__toggle-button ${
               isActive ? '' : 'extension__toggle-button--inactive'

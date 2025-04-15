@@ -13,7 +13,10 @@
 
   &__container {
     display: grid;
+    grid-template-columns: repeat(auto-fit, 382px);
+    justify-content: center;
     gap: 12px;
+    width: 100%;
   }
 }
 

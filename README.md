@@ -21,17 +21,21 @@ I also wanted to gain more experience with CSS grid as it's a very powerful tool
 ### Desktop
 
 Dark
+
 ![Preview](./readme-images/desktop-preview-dark.png)
 
 Light
+
 ![Preview](./readme-images/desktop-preview-light.png)
 
 ### Mobile
 
 Dark
+
 ![Preview](./readme-images/mobile-preview-dark.png)
 
 Light
+
 ![Preview](./readme-images/mobile-preview-light.png)
 
 ## Author
